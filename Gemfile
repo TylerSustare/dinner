@@ -48,3 +48,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# vscode https://dev.to/vvo/the-three-extensions-you-need-for-rails-in-vs-code-5h7j
+gem 'solargraph', group: :development
+gem 'rubocop', group: :development
