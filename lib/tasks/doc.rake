@@ -1,5 +1,5 @@
 namespace :doc do
-    desc "This rake does something useful!"
+    desc "This rake builds the container to run locally"
   
     task :build do
       sh "docker build -t dinner ."
