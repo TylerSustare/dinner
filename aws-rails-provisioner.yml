@@ -1,0 +1,15 @@
+version: '0'
+
+vpc:
+  max_azs: 2
+  enable_dns: true
+services:
+  rails_no_db:
+    source_path: ./
+    fargate:
+      desired_count: 1
+      public: true
+      task:
+        environment:
+          SPOON: false
+          RAILS_LOG_TO_STDOUT: true

@@ -14,4 +14,12 @@ RUN bundle install
 
 ADD . $APP_HOME
 RUN yarn install --check-files
-CMD ["rails","server","-b","0.0.0.0"]
+
+# set some environment variables hopefully
+ENV RAILS_SERVE_STATIC_FILES=true
+ENV RAILS_ENV=production
+ENTRYPOINT [ "bundle", "exec" ]
+# fargate cluster needs the container to be running on port 80 
+CMD ["rails","server","-b","0.0.0.0","-p","80"]  
+
+# CMD ["RAILS_ENV=production","bundle","exec","rake","assets:precompile","&&","RAILS_SERVE_STATIC_FILES=true","RAILS_ENV=production","rails","server","-b","0.0.0.0","-p","3000"]
