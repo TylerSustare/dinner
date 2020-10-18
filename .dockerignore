@@ -1,1 +1,3 @@
 cdk*
+node_modules
+.bundle
