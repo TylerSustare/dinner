@@ -83,6 +83,9 @@ GEM
     concurrent-ruby (1.1.7)
     connection_pool (2.2.3)
     crass (1.0.6)
+    debase (0.2.4.1)
+      debase-ruby_core_source (>= 0.10.2)
+    debase-ruby_core_source (0.10.11)
     e2mmap (0.1.0)
     erubi (1.9.0)
     execjs (2.7.0)
@@ -182,6 +185,8 @@ GEM
       unicode-display_width (>= 1.4.0, < 2.0)
     rubocop-ast (0.7.1)
       parser (>= 2.7.1.5)
+    ruby-debug-ide (0.7.2)
+      rake (>= 0.8.1)
     ruby-progressbar (1.10.1)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
@@ -259,6 +264,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+  debase (~> 0.2.4.1)
   jbuilder (~> 2.7)
   listen (~> 3.2)
   mongoid (~> 7.0.5)
@@ -266,6 +272,7 @@ DEPENDENCIES
   rails (~> 6.0.3, >= 6.0.3.2)
   react-rails
   rubocop
+  ruby-debug-ide (~> 0.7.2)
   sass-rails (>= 6)
   selenium-webdriver
   solargraph
