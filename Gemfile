@@ -39,8 +39,11 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   # vscode https://dev.to/vvo/the-three-extensions-you-need-for-rails-in-vs-code-5h7j
-  gem 'solargraph', group: :development
-  gem 'rubocop', group: :development
+
+  # IDE
+  gem 'solargraph'
+  gem 'rubocop'
+  # IDE Debugging
   gem 'ruby-debug-ide', '~> 0.7.2'
   gem 'debase', '~> 0.2.4.1'
 end
