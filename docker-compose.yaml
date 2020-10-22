@@ -1,0 +1,21 @@
+version: '3.7'
+services: 
+  mongo:
+    container_name: 'mongo_dinner'
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootpassword
+    ports:
+      - 27017:27017
+    volumes:
+      - local-data:/mongo/data/db # container
+
+  redis:
+    container_name: 'redis_dinner'
+    image: redis
+    ports:
+      - '6379:6379'
+
+volumes:
+    local-data:
