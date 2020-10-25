@@ -10,7 +10,7 @@ WORKDIR $APP_HOME
 
 RUN gem install bundler:2.1.2
 ADD Gemfile* $APP_HOME/
-RUN bundle install --without development
+RUN bundle install --without test development
 
 ADD . $APP_HOME
 RUN yarn install --check-files
@@ -20,10 +20,15 @@ ENV RAILS_SERVE_STATIC_FILES=true
 ENV RAILS_ENV=production
 
 RUN bundle exec rake assets:precompile
-ENTRYPOINT [ "bundle", "exec" ]
+
+# Redirect Rails log to STDOUT for Cloud Run to capture
+ENV RAILS_LOG_TO_STDOUT=true
+
+RUN chmod +x entry.sh
+ENTRYPOINT ["/app/entry.sh"]
 
 # fargate cluster needs the container to be running on port 80 
-CMD ["rails","server","-b","0.0.0.0","-p","3000"]  
+# CMD ["rails","server","-b","0.0.0.0","-p","3000"]  
 # RAILS_ENV=production bundle exec rake assets:precompile
 # apparently you send in the `-e` flag for production now a days
 # RAILS_SERVE_STATIC_FILES=true rails server -b 0.0.0.0 -p 3000 -e production
