@@ -1,27 +1,14 @@
-# README
+# Deployed with Google Cloud Run
+
+## Inspired by this great guide
+
+> ### Google Cloud Run on Rails: a real life example
+
+- https://medium.com/google-cloud/google-cloud-run-on-rails-a-real-life-example-part-1-preparing-the-ground-705c94ab8a7a
+- https://medium.com/google-cloud/google-cloud-run-on-rails-a-real-life-example-part-2-running-locally-5734a1a7532f
+- https://medium.com/google-cloud/google-cloud-run-on-rails-a-real-life-example-part-3-production-environment-and-security-e109063ef745
+- https://medium.com/google-cloud/google-cloud-run-on-rails-a-real-life-example-part-4-going-live-64c566b73b7b
 
 ## Setup with React Rails
+
 https://github.com/reactjs/react-rails
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

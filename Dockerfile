@@ -10,7 +10,8 @@ WORKDIR $APP_HOME
 
 RUN gem install bundler:2.1.2
 ADD Gemfile* $APP_HOME/
-RUN bundle install --without test development
+RUN bundle config set without 'test development'
+RUN bundle install 
 
 ADD . $APP_HOME
 RUN yarn install --check-files
